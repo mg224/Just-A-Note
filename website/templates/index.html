@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block main %}
+<h1 align="center">Notes</h1>
+    <div class="mb-3">
+        <form action="/" method="post">
+            <div class="mb-3">
+                <textarea autofocus class="form-control" id="note" name="note" rows="3"></textarea>
+            </div>
+            <button class="btn btn-success" type="submit">Add Note</button>
+        </form>
+    </div>
+    <div class="mb-3">
+        <ul class="list-group list-group-flush" id="notes">
+            {% for note in user.notes %}
+                <li class="list-group-item">
+                    <p align="left">{{ note.text }}</p>
+                    <div class="btn-group" style="float: right;">
+                        <a class="btn btn-outline-primary" href="{{ url_for('views.edit', id=note.id) }}">&nbsp;&nbsp;Edit&nbsp;&nbsp;</a>
+                        <a class="btn btn-outline-danger" href="{{ url_for('views.delete', id=note.id) }}">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endblock %}
