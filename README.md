@@ -1,3 +1,3 @@
 # Just A Note
 #### Video Demo:  https://youtu.be/PvYF0cRwzsA
-#### Description: Just A Note is a full stack web application that uses Python, Flask, HTML, and CSS. The backend is done using Flask and Python, while the frontend is done using HTML and CSS. The web app allows new users to register for an account with an email, name, password, and confirmation. Returning users can simply log in with their email and password.
+#### Description: Just A Note is a full stack web application that uses Python/Flask for the backend and HTML/CSS/Bootstrap for the frontend. The web app allows new users to register for an account with an email, name, password, and confirmation. Returning users can simply log in with their email and password. Basic CRUD functionality by allowing users to create, read, update, and delete their notes.
